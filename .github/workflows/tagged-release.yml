@@ -27,9 +27,9 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
+          files: dist/*
+          prerelease: false
           generate_release_notes: true
-          files: |
-            dist/*
 
       - name: Deploy to Test PyPi
         uses: pypa/gh-action-pypi-publish@release/v1

@@ -31,4 +31,5 @@ jobs:
         with:
           files: dist/*
           prerelease: true
-          generate_release_notes: false
+          generate_release_notes: true
+          tag_name: bleeding-edge

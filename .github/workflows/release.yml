@@ -1,4 +1,4 @@
-name: 'tagged-release'
+name: Release
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - v*
 
 jobs:
-  tagged-release:
-    name: Tagged Release
+  release:
+    name: Release & Deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install dependencies & Build
+      - name: Install dependencies & build
         run: |
           python -m pip install --upgrade pip
           pip install build

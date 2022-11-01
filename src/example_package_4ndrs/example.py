@@ -8,4 +8,4 @@ def hello(name):
 
 
 def bye(name):
-    print(f"bye, {name}")
+    print(f"Bye, {name}")

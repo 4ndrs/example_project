@@ -9,3 +9,7 @@ def hello(name):
 
 def bye(name):
     print(f"Bye, {name}")
+
+
+def cast_off():
+    print("CHANGE BEETLE")

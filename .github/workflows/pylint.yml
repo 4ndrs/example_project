@@ -1,0 +1,24 @@
+name: Pylint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pylint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup python
+        uses: actions/setup-python@v4
+        
+      - name: Install pylint & Run
+        run: |
+          pip install pylint
+          pylint src

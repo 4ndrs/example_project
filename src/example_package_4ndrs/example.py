@@ -5,3 +5,7 @@ def add_one(number):
 
 def hello(name):
     print(f"Hello, {name}!")
+
+
+def bye(name):
+    print(f"bye, {name}")

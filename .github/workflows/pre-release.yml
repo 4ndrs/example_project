@@ -27,10 +27,10 @@ jobs:
           python -m build
 
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: marvinpinto/action-automatic-releases@latest
         with:
           files: dist/*
           prerelease: true
           generate_release_notes: true
-          tag_name: bleeding-edge
-          token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: bleeding-edge
+          repo_token: ${{ secrets.GITHUB_TOKEN }}

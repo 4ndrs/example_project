@@ -25,11 +25,11 @@ jobs:
           python -m build
 
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: marvinpinto/action-automatic-releases@latest
         with:
           files: dist/*
           prerelease: false
-          generate_release_notes: true
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy to Test PyPi
         uses: pypa/gh-action-pypi-publish@release/v1
